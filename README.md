@@ -1,6 +1,5 @@
 
 # VanillaJS
-노마드코더 인강 들으면서 바닐라자바스크립트 익히기📗💻
 
 
 
@@ -13,4 +12,6 @@
 - JS To Do List
 - Get Geolocation
 - Get Weather Infomation
+
+
 © 2021 GitHub, Inc.
