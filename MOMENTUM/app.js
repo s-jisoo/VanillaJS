@@ -6,8 +6,6 @@ function onLoginBtnClick(){
     console.dir(loginInput); // loginInput의 내부를 보기 위해서.
     console.log(loginInput.value);
 
- 
-
 }
 
 
