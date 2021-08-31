@@ -1,12 +1,21 @@
 const loginForm = document.querySelector("#login-form");
-const loginInput = loginForm.querySelector("input");
-const loginButton = loginForm.querySelector("button");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-function onLoginBtnClick(){
-    console.dir(loginInput); // loginInput의 내부를 보기 위해서.
-    console.log(loginInput.value);
+const HIDDEN_CLASSNAME = "hidden";  
 
+function onLoginSubmit(event){
+    event.preventDefault(); // .브라우저의 기본 동작을 막아줌.(즉, 새로고침 안됨)
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    //greeting.innerText = "hello " + username;
+    greeting.innerText = `hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+   
+    
 }
 
 
-loginButton.addEventListener("click",onLoginBtnClick);
+
+
+loginForm.addEventListener("submit",onLoginSubmit);
