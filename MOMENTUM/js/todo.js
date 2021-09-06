@@ -3,7 +3,6 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
-
 let toDos = [];
 
 /**
@@ -27,14 +26,11 @@ function deleteToDo(event){
     // event.target --> 클릭된 버튼 객체(HTML element)
     // event.target.parentElement --> 클릭된 버튼 객체의 부모객체 = li
     const li = event.target.parentElement;
-    console.log(li.id);
     li.remove();
 
-    
-   // toDos = toDos.filter((element) => element.id !== li.id);
-
-    
-   
+    let liid = parseInt(li.id);
+    toDos = toDos.filter((element) => element.id !== liid );
+    saveToDos();
 
 }
 /*todo 그리기 이벤트*/
@@ -85,9 +81,7 @@ if(savedToDos){ // saveTDos가 존재한다면,
     // localStorage에서 가져온 string을 배열로 바꿔서 parsedToDos에 저장.
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
+
     parsedToDos.forEach(paintToDo);
 }
 
-function sexyFilter(){
-
-}
