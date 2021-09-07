@@ -2,8 +2,6 @@ const images=[ "0.jpg", "1.jpg","2.jpg"];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-console.log(chosenImage);
-
 
 /**
  * 배경화면 만들기
@@ -17,7 +15,6 @@ console.log(chosenImage);
 const bgImage = document.createElement("img");
 bgImage.src = `img/${chosenImage}`;
 
-console.log(bgImage);
 
 //body 안에 넣어주기
 document.body.appendChild(bgImage);
