@@ -16,6 +16,14 @@ let toDos = [];
  * 해당 item을 제외한 새로운 array를 다시 만든다. 
  */
 
+ function liMouseOver(button){
+    button.style.display="block";
+ }
+
+ function liMouseOut(button){
+    button.style.display="none";
+ }
+
 /*localStorage에 작성한 todo 저장 이벤트 */
 function saveToDos(){
     localStorage.setItem(TODOS_KEY,JSON.stringify(toDos));
@@ -45,12 +53,17 @@ function deleteToDo(event){
 function paintToDo(newToDoObj){ // 무엇을 그려야 할지 모르기때문에 인자 주기!!
     const li = document.createElement("li");
     li.id = newToDoObj.id;
+    li.style.marginBottom="15px";
     const span = document.createElement("span");
     span.innerText=newToDoObj.text;
+    span.style.marginLeft="5px";
     const button = document.createElement("button");
+    button.className="button";
     button.innerText = "❌";
-    button.addEventListener("click",deleteToDo)
+    button.addEventListener("click",deleteToDo);
     li.appendChild(span); // appendChild는 마지막에 놓여져야 함.
+    li.addEventListener("mouseover",function(){liMouseOver(button)});
+    li.addEventListener("mouseout",function(){liMouseOut(button)});
     li.appendChild(button);
     toDoList.appendChild(li);
 }

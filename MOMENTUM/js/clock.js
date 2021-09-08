@@ -1,4 +1,4 @@
-const clock = document.querySelector("h2#clock");
+const clock = document.querySelector("h1#clock");
 
 /**
  * 시계 만들기

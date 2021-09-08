@@ -1,4 +1,124 @@
+body{
+    overflow: hidden;
+    margin: 0px auto;
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+}
 
+img{
+    filter: brightness(50%); 
+}
+
+#backgroundImg{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#weather{
+    top: 15px;
+    width: 9%;
+    margin-left: 90%;
+    position: fixed;
+    color: white;
+    margin-right: 100px;
+    /* background: #1d1c1ca3; */
+    border-radius: 5px;
+}
+.temp{
+    font-size: 20px;
+    font-weight: 500;
+}
+.city{
+    font-size: 15px;
+    font-weight: 300;
+}
 .hidden{
     display:none;
+}
+
+h1{
+    font-size: 120px;
+    margin-top: 13%;
+    margin-bottom: 0px;
+    color: white;
+}
+
+h2{
+    font-size: 50px;
+    color:white;
+}
+
+form {
+    margin-top:30px;
+}
+
+.question{
+    margin-bottom: 0px;
+    font-size: 35px;
+}
+.name{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    width: 350px;
+}
+
+#greeting{
+    margin-top: 8px;
+}
+
+#todo-form{
+    margin-top: 30px;
+}
+
+/* .login{
+    font-size: 20px;
+    height: 40px;
+} */
+
+.todo_q{
+    color: white;
+    font-size:22px;
+    margin-top: 70px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.todo{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    width: 350px;
+    font-weight: lighter;
+}
+
+#todo-list{
+    margin-left:39.5%;
+    text-align: left;
+    color: white;
+    List-style-type :"📌";
+    width:300px;
+}
+
+.button{
+    float: right;
+    display:none;
+}
+
+#quote{
+    bottom: 30px;
+    width: 100%;
+    position: fixed;
+    color: #ffffffa6;
 }

@@ -15,9 +15,11 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 bgImage.src = `img/${chosenImage}`;
 
+const body = document.getElementsByTagName("body")[0];
 
 //body 안에 넣어주기
-document.body.appendChild(bgImage);
+//document.body.appendChild(bgImage);
+body.insertBefore(bgImage, body.firstChild);
 
 bgImage.id = "backgroundImg";
 
