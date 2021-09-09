@@ -17,8 +17,8 @@ function onGeoOk(position){
         weather.innerText = `${data.weather[0].main} / ${data.main.temp}℃`
         city.innerText = data.name;
 
-        weathercontain.style.background= "#1d1c1ca3";
-
+        weathercontain.style.background= "rgb(117 113 113 / 54%)";
+        
     });
 };
 

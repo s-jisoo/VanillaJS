@@ -109,6 +109,8 @@ form {
     color: white;
     List-style-type :"📌";
     width:300px;
+    height: 100px;
+    overflow: auto;
 }
 
 .button{
