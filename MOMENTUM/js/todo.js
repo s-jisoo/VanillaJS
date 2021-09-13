@@ -37,7 +37,7 @@ function deleteToDo(event){
     li.remove();
 
     let liid = parseInt(li.id);
-    toDos = toDos.filter((element) => element.id !== liid );
+    toDos = toDos.filter((element) => element.id !== liid );  //삭제한 id를 제외하고 다시 toDos변수에 담음.
     saveToDos();
 
 }
