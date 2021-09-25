@@ -80,6 +80,7 @@ img{
     padding:15px 50px 0px 50px;
 }
 
+/* clock */
 .clock-wrap{
     position: absolute;
     width: 400px;
@@ -95,6 +96,54 @@ img{
 .clock{
    font-size: 90px;
    
+}
+
+/* weather */
+.weather-wrap{
+    position: absolute;
+    background: #9ccdce;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    border: none;
+    color:black;
+    text-align: center;
+    padding:10px;
+    top:200px;
+    
+    /* #d08794 */
+}
+
+.city{
+    text-align: left;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.weathericon{
+    width: 150px;
+    height: 150px;
+}
+
+.weather{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.min-max{
+    padding-top: 10px;
+}
+.min{
+    float: left;
+    padding-left: 70px;
+    color: blue;
+}
+
+
+.max{
+    float: right;
+    padding-right: 65px;
+    color:red;
 }
 
 /* 로그인 화면  */
