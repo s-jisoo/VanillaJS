@@ -38,8 +38,13 @@ function submitEvent(event){
 
 const saveLocal_name = localStorage.getItem(NAME_KEY);
 
+
 if(saveLocal_name){
+    main_form.removeAttribute("class");
     printEvent(saveLocal_name);
-}else{
+    
+
+}else{ // 로그인 화면을 보여줘야됨.
+    loginForm.classList.remove("hidden");
     loginForm.addEventListener("submit",submitEvent);
 }

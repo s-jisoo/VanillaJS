@@ -80,6 +80,10 @@ img{
     padding:15px 50px 0px 50px;
 }
 
+.hidden{
+    display:none;
+}
+
 /* clock */
 .clock-wrap{
     position: absolute;
