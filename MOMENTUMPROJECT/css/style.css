@@ -105,7 +105,7 @@ img{
 /* weather */
 .weather-wrap{
     position: absolute;
-    background: #9ccdce;
+    /* background: #9ccdce; */
     width: 250px;
     height: 250px;
     border-radius: 20px;
