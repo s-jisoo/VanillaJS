@@ -17,19 +17,38 @@ const login_Q = document.querySelector(".login");
 login_Q.innerText = "What's your name?"
 const loginForm = document.querySelector("#login-form");
 const goBtn = loginForm.querySelector(".go_btn");
-const nameInput = loginForm.querySelector(".name");
+const nameInput = loginForm.querySelector(".name"); // 로그인폼에서 class가 name으로된 태그 불러오기.
+
 const NAME_KEY = "name";
+
+/* logout */
+const logoutB =  document.querySelector(".logout");
 
 /* content */
 const main_form = document.querySelector("#main");
 
 
+// // 로그아웃버튼 클릭시, localstorage에 데이터 삭제.= 로그인페이지로 돌아가기.
+logoutB.addEventListener("click",logoutButtonClickEvent);
 
+function logoutButtonClickEvent(event){
+    clearLocalStorage();  
+    location.reload(); // 새로고침.
+}
+
+// 로컬저장소에서 저장한 이름 모두 삭제하기
+function clearLocalStorage(){
+    localStorage.clear();
+}
+
+//  로그인한 정보를 저장(즉, 이름 저장.) 
 function saveLocalStorage(nameValue){
     localStorage.setItem(NAME_KEY,nameValue);
 }
 
+// 로그인한 후, 메인화면으로 전환.
 function printEvent(nameValue){
+    debugger;
     loginForm.classList.add("hidden");
     titleWrap.removeAttribute("class");
     main_title.innerText=`${nameValue}'s ToDoList`;
@@ -37,6 +56,7 @@ function printEvent(nameValue){
     navigator.geolocation.getCurrentPosition(successEvent, errorEvent); //날씨 정보에 대한 지역위치 불러오기
 }
 
+// 날씨, 지역, 위치 불러오기.
 function successEvent(position){
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
@@ -87,7 +107,7 @@ function successEvent(position){
 
 function submitEvent(event){
     event.preventDefault();
-    const nameValue = nameInput.value;
+    const nameValue = nameInput.value; // 로그인폼에서 처음 쓴 이름값
     printEvent(nameValue);
     saveLocalStorage(nameValue);
 }
@@ -95,7 +115,7 @@ function submitEvent(event){
 
 const saveLocal_name = localStorage.getItem(NAME_KEY);
 
-if(saveLocal_name){
+if(saveLocal_name){ // localStorage에 저장된 item이 있으면, 메인화면 보여주기. 
     main_form.removeAttribute("class");
     printEvent(saveLocal_name);
 
