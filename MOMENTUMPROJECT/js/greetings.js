@@ -48,7 +48,6 @@ function saveLocalStorage(nameValue){
 
 // 로그인한 후, 메인화면으로 전환.
 function printEvent(nameValue){
-    debugger;
     loginForm.classList.add("hidden");
     titleWrap.removeAttribute("class");
     main_title.innerText=`${nameValue}'s ToDoList`;
@@ -81,7 +80,7 @@ function successEvent(position){
  
          // background 보여주기 (색깔)
  
-         weatherWrap.style.background="#afd9dfad";
+         weatherWrap.style.background="#E3C7CF";
          
          /* <img src=""></img>  */
          const imgTag = document.createElement("img");

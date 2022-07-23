@@ -13,7 +13,7 @@ html, body{
 
 /* header 관련 부분 */
 #title-wrap{
-    color: white;
+    color: black;
     height: 100px;
     position: relative;
     margin: 20px 20px 0px 20px;
@@ -41,7 +41,7 @@ img{
 .title{
     font-size: 35px;
     font-weight: bold;
-    text-shadow: 3px 3px black;
+    text-shadow: 2px 2px #be00ffad;
     /*height: 100%;*/
     left: 11%;
     position: absolute;
@@ -53,6 +53,11 @@ img{
     font-size: 18px;
     padding: 10px 20px;
     margin-left: 1350px;
+    background-color: rgb(202, 201, 201);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 2px black;
+    
 }
 
 /* content 관련 부분 */
@@ -94,7 +99,7 @@ img{
 /* clock */
 .clock-wrap{
     position: absolute;
-    width: 400px;
+    width: 420px;
     background: #453966;
     height: 150px;
     border-radius: 20px;
@@ -114,13 +119,13 @@ img{
     position: absolute;
     /* background: #9ccdce; */
     width: 250px;
-    height: 250px;
+    height: 270px;
     border-radius: 20px;
     border: none;
     color:black;
     text-align: center;
     padding:10px;
-    top:200px;
+    top:230px;
     
     /* #d08794 */
 }
@@ -155,6 +160,31 @@ img{
     float: right;
     padding-right: 65px;
     color:red;
+}
+
+/* list */
+.list-wrap{
+    position: absolute;
+    width: 800px;
+    background: #f1ece4;
+    height: 480px;
+    border-radius: 20px;
+    border: none;
+    color:white;
+    /* text-align: center; */
+    /* padding:10px; */
+    margin-left: 500px;
+}
+
+.listHeader{
+    background: black;
+    height: 38px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: none;
+    color: white;
+    padding: 10PX;
+    padding-left: 15PX;
 }
 
 /* 로그인 화면  */
@@ -203,4 +233,19 @@ img{
     color: black;
     outline: none;
 
+}
+
+
+/* footer */
+#from{
+    bottom: 20px;
+    width: 100%;
+    position: fixed;
+    color: #ffffffa6;
+    border-top:1px solid #ffffff1f;
+    text-align: center;
+}
+
+.fromName{
+    padding-top: 10px;
 }
